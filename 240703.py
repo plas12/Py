@@ -133,3 +133,18 @@ for i in n:
 
 f.close()
 #길이 구하기
+
+
+#f = open("anna.txt", "w")
+#f.write("Elsa? Do you want to build a snowman?\nCome on, let's go and play! i naver see you\nanymore Come out the door it's like you've\ngone away We used to be best buddies And\nnow we're not i wish you would tell me wht?\nDo you want to build a snowman? it doesn't\nhave to be a snowman Go away, Anna Okay\nbye")
+#f.close()
+
+f = open("anna.txt", "r")
+n = f.read()
+n = n.split()
+for i in n:
+  if i.count('b') > 0:
+    print(i)
+    
+    
+f.close()
