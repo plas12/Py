@@ -117,15 +117,19 @@ f = open("fruit.txt", "w")
 txt = ["apple", "banana", "orange", "grape", "kiwi", "strawberry", "wildberry", "watermelon", "mange", "papaya", "coconut"]
 for i in range( len( txt)):
     f.write("%s\n" % txt[i])
-    
-f.close()
-'''
+f.close
 
 f = open("fruit.txt", "r")
 #파일 읽어오기
 n = f.read()
-
-
+n = n.split("\n")
+print(n)
 #기준 정하기
-a = int(input())
+b = int(input())
+#길이 구하기
+for i in n:
+  if len(i) > b:
+    print(i)
+
+f.close()
 #길이 구하기
