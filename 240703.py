@@ -145,6 +145,45 @@ n = n.split()
 for i in n:
   if i.count('b') > 0:
     print(i)
-    
-    
+     
 f.close()
+
+
+def read_file(file_name):
+  f = open(file_name, "r")
+  print( f.read() )
+  f.close()
+def write_file(file_name, mode):
+  if mode == 'w':
+    txt = ''
+    f = open(file_name, "w")
+    a = 0
+    print("Input(Enter 'q' to exit input")
+    while 1:
+      a = input()
+      if(a == 'q'):
+        break
+      txt = txt + ( a + '\n')
+    f.write(txt)
+    f.close()
+    
+  if mode == 'a':
+    
+    txt = ''
+    f = open(file_name, "a")
+    a = 0
+    print("Input(Enter 'q' to exit input")
+    while 1:
+      a = input()
+      if(a == 'q'):
+        break
+      txt = txt + ( a + '\n')
+    f.write(txt)
+    f.close()
+
+file_name = input("File name : ")
+mode = input("File mode(r/a/w) : ")
+if mode == 'r':
+  read_file(file_name)
+else:
+  write_file(file_name, mode)
